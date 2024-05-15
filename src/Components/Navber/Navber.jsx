@@ -18,21 +18,22 @@ const [open , setOpen]  = useState(false)
       ];
       
      
-      
+      <FaTimes className="text-2xl" />
 
 
     return (
-        <nav className=" bg-[#54a0ff] p-7"> 
+        <nav className=" bg-[#4b7bec] p-7"> 
             <div className="md:hidden" onClick={() => setOpen(!open)}>
                 {
-                    open === true ? <FaTimes className="text-2xl" /> : <CiMenuBurger className="text-2xl"></CiMenuBurger> 
+                    open === true ? <button className="hover:bg-[#a5b1c24d] p-3 rounded-[10px]"><FaTimes className="text-2xl" /></button> : <button
+                    className="hover:bg-[#a5b1c2] rounded-[10px] p-3" ><CiMenuBurger className="text-2xl"></CiMenuBurger></button> 
                 }
            
             </div>
      
-     <ul className={`ml-3 md:flex rounded-[10px] p-3 duration-1000 absolute 
+     <ul className={`ml-3 md:flex rounded-[10px] p-3 duration-1000 absolute md:static  md:justify-between 
      ${open ? 'top-16' : '-top-60'}
-      bg-[#01a3a4] px-6 shadow-lg `}>
+      bg-[#01a3a4] px-6 shadow-2xl `}>
      {
         routes.map( route => <Link key={route.id} route={route}></Link> )
       }

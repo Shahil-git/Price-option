@@ -1,7 +1,11 @@
 
 import './App.css'
+import LineChart from './Components/LineChart/LineChart'
 import Navber from './Components/Navber/Navber'
 import Nev from './Components/Nevagition/Nev'
+import Price from './Components/Price/Price'
+
+
 
 function App() {
  
@@ -9,10 +13,10 @@ function App() {
   return (
     <>
     <Navber></Navber>
-    <Nev></Nev>  <br />
-    
+    {/*<Nev></Nev>*/}  <br />
+    <Price></Price>
+    <LineChart></LineChart>
 
-<h1  className='font-Poetsen text-5xl bg-[#006266]  lg:rounded-none md:rounded-full  lg:bg-[#833471]'>Yemtehan Shahil </h1>
 
 
     </>
